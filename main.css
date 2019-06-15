@@ -1,0 +1,183 @@
+/* ANIMATION LIST */
+@keyframes daeos-fade-in{
+    0% {
+        left: -50rem;
+    }
+    100% {
+        left: 0rem;
+    }
+}
+@keyframes daeos-fade-out{
+    0% {
+        left: 0rem;
+    }
+    100% {
+        left: -50em;
+    }
+}
+@keyframes daeos-execute{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 559.4px;
+    }
+}
+@keyframes daeos-trigger{
+    0%{
+        height: 29px;
+        margin-left: 82px;
+        width: 559.4px;
+        margin-top: 4.9rem;
+
+    }
+    50%{
+        height: 29px;
+        margin-left: 0px;
+        width: 642px;
+        margin-top: 4.9rem;
+    }
+    100%{
+        height: 109px;
+        width: 642px;
+
+        margin-left: 0px;
+        margin-top: 0rem;
+    }
+}
+@keyframes daeos-collapse{
+    0%{
+
+    }
+    100%{
+        height: 9px;
+        background-color: #00D9FF;
+    }
+}
+@keyframes daeos-hide{
+    0%{
+        opacity: 100%
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+
+/* Container */
+
+#daeos-container{
+    background-color: none;
+    position: fixed;
+    top: 8rem;
+    left: 0;
+    width: 23rem;
+    z-index: 123456;
+
+
+    animation: daeos-fade-in .5s forwards;
+}
+    #daeos-container.fadeout{
+        animation: daeos-fade-out .5s forwards;
+    }
+
+    
+#daeos-animated-bar{
+    background-color: #00D9FF;
+    margin-left: 82px;
+    margin-top: 4.95rem;
+    z-index: 123456789999999;
+    height: 29px;
+    width: 0;
+}
+    #daeos-animated-bar.activated{
+        animation: daeos-execute .5s forwards;
+
+    }
+    #daeos-animated-bar.triggered{
+        animation: daeos-trigger .5s forwards;
+    }
+    #daeos-animated-bar.collapse{
+        animation: daeos-collapse .5s forwards;
+    }
+    
+
+#daeos-grey-box{
+    background-color: rgba(79,79,79,0.67);
+    position: fixed;
+    opacity: 10%;
+    height: 109px;
+    width: 642px;
+    z-index: 12345;
+}
+    #daeos-grey-box.collapse{
+        animation: daeos-collapse .5s forwards;
+    }
+
+
+/*TOP BAR */
+#daeos-top-bar{
+    background-color: lightgrey;
+    position: fixed;
+    left: 0rem;
+    height: 63.81px;
+    width: 642px;
+    z-index: 12345678;
+
+    animation-direction: normal;
+    animation-iteration-count: 2;
+    animation: daeos-fade-in .5s;
+}
+    #daeos-top-bar.fadeout{
+        animation: daeos-fade-out .5s forwards;
+    }
+    #daeos-top-bar.hidden{
+        animation: daeos-hide .5s forwards;
+    }
+
+#daeos-recipe-h1{
+    margin-top: 1rem;
+    margin-left: 8rem;
+
+    height: 34.69px;
+    width: 394.12px;
+    color: #000;
+    font-family: "Avenir Next";
+    font-size: 34px;
+    line-height: 46px;
+}
+
+
+/* SIDE BAR */
+#daeos-side-bar{
+    background-color: #00D9FF;
+    position: fixed;
+    height: 93.26px;
+    width: 82.58px;
+    z-index: 123456789;
+    top: 8rem;
+}
+    #daeos-side-bar.hidden{
+        animation: daeos-hide .5s forwards;
+    }
+#daeos-score-h2{
+    margin-top: 1.3rem;
+    margin-left: .6rem;
+    height: 39.27px;
+    width: 68.53px;
+    color: #000;
+    font-family: "Avenir Next";
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    text-align: center;
+}
+#daeos-score-h3{
+    margin-top: -2.3rem;
+    margin-left: .3rem;
+    height: 31.41px;
+    color: #000;
+    font-family: "Avenir Next";
+    font-size: 15px;
+    line-height: 30px;
+    text-align: center;
+}
